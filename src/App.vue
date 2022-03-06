@@ -24,9 +24,7 @@ function addProductToCart(productId: number): void {
 }
 
 function removeProductFromCart(productId: number): void {
-
-      state.cart = state.cart.filter((product) => product.id !== productId);
- 
+  state.cart = state.cart.filter((product) => product.id !== productId);
 }
 </script>
 
@@ -34,7 +32,7 @@ function removeProductFromCart(productId: number): void {
   <div class="app-container">
     <TheHeader class="header" />
     <Shop
-      :products="state.producsts"
+      :products="state.products"
       @add-product-to-cart="addProductToCart"
       class="shop"
     />
