@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import CartProduct from './CartProduct.vue';
+import type { ProductInterface } from '@/interfaces';
+
 const props = defineProps<{
-  cart: ProductCartInterface[];
+  cart: ProductInterface[];
 }>();
 </script>
 
