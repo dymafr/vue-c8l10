@@ -1,15 +1,13 @@
 <script setup lang="ts">
 import CartProduct from './CartProduct.vue';
+const props = defineProps<{
+  cart: ProductCartInterface[];
+}>();
 </script>
 
 <template>
   <div class="d-flex flex-column">
-    <CartProduct />
-    <CartProduct />
-    <CartProduct />
-    <CartProduct />
-    <CartProduct />
-    <CartProduct />
+    <CartProduct v-for="product of cart" :product="product" />
   </div>
 </template>
 

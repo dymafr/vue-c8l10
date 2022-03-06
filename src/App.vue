@@ -28,11 +28,11 @@ function addProductToCart(productId: number): void {
   <div class="app-container">
     <TheHeader class="header" />
     <Shop
-      :products="state.products"
+      :products="state.producsts"
       @add-product-to-cart="addProductToCart"
       class="shop"
     />
-    <Cart class="cart" />
+    <Cart :cart="state.cart" class="cart" />
     <TheFooter class="footer" />
   </div>
 </template>
